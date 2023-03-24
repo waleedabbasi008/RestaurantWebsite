@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&family=Open+Sans&family=Poppins:wght@300;500;600&family=Rubik+Spray+Paint&family=Sono:wght@800&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.recipe__card-container{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 3rem;
+    margin-left: 13rem;
+    
+}
+.cards{
+width: 50%;
+}
+.card{
+    width: 100%;
+    height: 40vh;
+    line-height: 1.8rem;
+    overflow: hidden;
+    background: blueviolet;
+    border-radius: 1.5rem;
+}
+.card .id{
+    border: 1px solid #333;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    
+}
+.card .category{
+    text-align: center;
+}
+.card img{
+    width: 100%;
+    height: 20vh;
+}
+// ################################# Navbar styling #########################
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    background: blueviolet;
+    height: 10vh;
+    margin-bottom: 5rem;
+    box-shadow: 5px 5px 15px blue;
+   
+}
+.navbar .btn{
+    width: 5rem;
+    height: 4rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.navbar .btn:hover{
+    background: blueviolet;
+}
+// ############################ Responsive nav bar ########################
+// ##################### for tablet ########################################
+@media screen and (max-width:1024px) {
+    .navbar {
+        width: 768px;
+        // border: 2px solid red;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        background: blueviolet;
+        height: fit-content;
+        padding-left: 19rem;
+        
+       
+    }
+}
+// ############################ Responsive Cards ########################
+// ##################### for tablet ########################################
+@media screen and (max-width:1024px) {
+    .recipe__card-container{
+        // border: 2px solid green;
+        width: 768px;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        gap: 2rem;
+       margin-left: 0;
+        
+    }
+    .cards{
+        width: 94%;
+        
+    }
+}
+// ############################ Responsive nav bar ########################
+// ##################### for Phones ########################################
+@media screen and (max-width:600px) {
+    .navbar {
+        width: 100%;
+        // border: 2px solid red;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        background: blueviolet;
+        height: fit-content;
+        padding-left: 10rem;
+        
+       
+    }
+}
+// ############################ Responsive Cards ########################
+// ##################### for tablet ########################################
+@media screen and (max-width:600px) {
+    .recipe__card-container{
+        // border: 2px solid green;
+        width: 100%;
+        display: grid;
+        grid-template-columns:  1fr;
+        gap: 2rem;
+       margin-left: 1rem;
+        
+    }
+    .cards{
+        width: 94%;
+        
+    }
+}

@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&family=Open+Sans&family=Rubik+Spray+Paint&family=Sono:wght@800&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Rubik Spray Paint', cursive;
+font-family: 'Sono', sans-serif;
+}
+.card-section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    // background: linear-gradient(to left, rgb(161, 111, 111) 33%, rgb(63, 63, 52) 33%, rgb(26, 26, 24) 66%, rgb(20, 20, 62) 66%);
+    background: radial-gradient(black, rgb(66, 65, 65),rgb(98, 95, 95),   rgb(126, 120, 120), rgb(169, 163, 163));
+    
+}
+.card-container{
+   
+    flex: 0 0 calc(53.33% - 30px);
+    margin: 50px;
+    box-shadow: 15px 15px 25px #333;
+    border-radius: 25px;
+    flex-basis: 25%;
+    height: 45vh;
+    
+    
+}
+
+.card{
+    
+}
+.card-body .card-number{
+    border: 2px solid #333;
+    border-radius: 47%;
+   font-weight: 700; 
+   font-size: 1rem;
+    padding: 5px 10px 5px 10px;
+}
+.card-body .card-author{
+    margin-top: 10px;
+    color: #333;
+
+}
+// ############### card k andar image ki styling ###
+.card .card-image{
+    width: 100%;
+    height: 20vh;
+}
+// ############################ navbar styling #############################
+.navbar{
+    
+    
+    
+}
+.navbar .btn-group{
+    margin: auto;
+    
+}
+// ################################### Main Navbar styling ##########################
+.main-navbar{
+    background: #292929;
+    height: 10vh;
+}
+.main-navbar .container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.main-navbar .container ul{
+    display: flex;
+    margin-top: 27px;
+    
+}
+.main-navbar .container ul li{
+    list-style: none;
+    padding-left: 20px;
+}
+.main-navbar .container ul li a{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(190, 182, 182);
+    transition: color 0.5s ease-in-out;
+}
+.main-navbar .container ul li a:hover{
+    color: #fff;
+}
+
+.main-navbar .container img{
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+// ###################### home styling ###################
+.hero{
+    
+    height: 90vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b25saW5lJTIwY291cnNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero .container .container-text{
+    padding-top: 25vh;
+    color: rgb(200, 192, 192);
+}
+.container-text .btn{
+  color:  rgb(99, 93, 93);
+}
+.container-text .heading{
+    font-size: 3rem;
+}
+.container-text p{
+    font-size: 1.5rem;
+}
+// ############################### Responsive Home #####################
+@media(max-width:1200px){
+    .container-text .heading{
+        font-size: 1.5rem;
+    }   
+    .container-text p{
+        font-size: 1rem;
+    } 
+}
+
+// ############################# About Us styling ######################
+.about{
+    height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://static.vecteezy.com/system/resources/previews/001/882/531/original/dark-blue-technology-background-free-vector.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.about .about-container .container-text .about-heading{
+ color: rgb(255, 249, 249);
+}
+.card-container img{
+    width: 100%;
+    height: 20vh;
+}
+// ############################### Responsive about #####################
+@media(max-width:1000px){
+    .about {
+        
+    }
+}
+@media(max-width:500px){
+    .card-container img {
+        margin-top: 100%;
+
+    }
+    .card-container .card-body{
+    height: 10vh;
+    width: 200px;
+    }
+}
+// ############################### contact us styling #############################################
+.contact-head{
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://media.istockphoto.com/id/1344418500/photo/call-centre-rep.jpg?b=1&s=170667a&w=0&k=20&c=1l1-HpY48kO-ueZ8I6df50c-Y_AWN_-FvhTmxoq2MO0=") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-container-text{
+    text-align: center;
+    color: rgb(161, 153, 153);
+}
+.contact-cards{
+    display: flex;
+    justify-content: space-around;
+    height: 35vh;
+    margin-top: -80px;
+}
+.contact-cards .card1-body{
+    text-align: center;
+    padding-bottom: 45px;
+    background: #fff;
+    line-height: 2rem;
+    box-shadow: 5px 5px 15px #333;
+}
+.icon{
+    font-size: 2.5rem;
+}
+.contact-cards .card2-body{
+    text-align: center;
+    padding-bottom: 45px;
+    background: #fff;
+    line-height: 2rem;
+    box-shadow: 5px 5px 15px #333;
+}
+.icon{
+    font-size: 2.5rem;
+}
+.contact-cards .card2-body .btn{
+    margin-top: 35px;
+}

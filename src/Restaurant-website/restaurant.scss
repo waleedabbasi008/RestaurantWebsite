@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --container-width-lg: 75%;
+--container-width-md: 86%;
+--container-width-sm: 90%;
+--container-width-xsm: 95%;
+}
+section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    
+}
+.card-container{
+    
+}
+.card-container .card{
+    background: rgba($color: #920606, $alpha: 1.0);
+    margin-bottom: 50px;
+    animation: move 2s 1 ;
+    box-shadow: 10px 5px 15px rgba($color: #a09090, $alpha: 1.0); 
+    height: fit-content;
+}
+.card-container .card img{
+    animation: move2 2s 1 ;
+}
+@keyframes move2{
+    0%{
+        transform: scaleX(-2);
+    }
+    100%{
+        transform: scaleX(-1);
+    }
+}
+@keyframes move{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+// ########## navbar styling #####################
+.navbar{
+    // border: 2px solid red;
+    background: rgba($color: #c7baba, $alpha: 1.0);
+    box-shadow: 10px 5px 15px rgba($color: #666262, $alpha: 1.0); 
+   
+}
+.navbar .btn-group .btn-group--item{
+    margin-left: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    width: 207px;
+    transition: background 0.5s ease-in-out;
+}
+.navbar .btn-group .btn-group--item:hover{
+    background: rgba($color: #a78282, $alpha: 1.0);
+}
+// ##################################### Responsive for tablets ################################
+@media screen and (max-width:1024px) {
+    section{
+        
+    }
+    .card-container{
+        width: 25rem;
+        height: fit-content;
+    }
+    .card-container .card{
+        width: 100%;
+        height: 25vh;
+    }
+    .navbar{
+        width: 100%;
+
+    }
+        .btn-group{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+    
+            
+        }
+        .navbar .btn-group button{
+            font-size: 1.5rem;
+            width: 200rem;
+    
+            
+        }
+
+
+    }
+    // ##################################### Responsive for phones ################################
+
+    @media screen and (max-width:600px) {
+        section{
+            width:100% ;
+        }
+        .navbar{
+            width: 100%;
+            
+        }
+            .btn-group{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+    
+        
+                
+            }
+
+        section .card-container{
+            width: 100%;
+            height: fit-content;
+            
+        }
+        .card-container .card img{
+            margin-top: 2rem;
+            height: 35vh;
+        }
+      .card-section .card-container .card{
+            width: 100%;
+
+        }
+    
+    
+        }
+    
+
