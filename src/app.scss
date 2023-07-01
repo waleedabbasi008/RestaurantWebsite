@@ -1,0 +1,447 @@
+/* =========== google fonts =========== */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&family=Montserrat:ital,wght@0,300;0,500;0,700;1,400&family=Open+Sans&family=Poppins:wght@300;500;600&family=Roboto+Mono:wght@200;300&family=Rubik+Spray+Paint&family=Rubik:wght@300&family=Sono:wght@800&family=Ysabeau+Infant:wght@300&family=Ysabeau+Office:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Delicious+Handrawn&family=Kablammo&family=Montserrat:ital,wght@0,300;0,500;0,700;1,400&family=Open+Sans&family=Poppins:wght@300;500;600&family=Roboto+Mono:wght@200;300&family=Rubik+Spray+Paint&family=Rubik:wght@300&family=Sono:wght@800&family=Ysabeau+Infant:wght@300&family=Ysabeau+Office:wght@200;300&display=swap');
+
+
+/* ======== base style ======= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: #0a071a;
+  color: #fff;
+}
+
+section,
+footer {
+  padding: 70px 0px;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #f5b70a;
+}
+
+p {
+  font-size: 1rem;
+  color: #c4c4c4;
+  line-height: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+i {
+  color: #fff;
+}
+
+// ######################### Variables for  styling #############################
+$primaryFontFamily: 'Alkatra', cursive;
+$secondaryFontFamily: 'Kablammo', cursive;
+
+// ############################### NAVBAR STYLING ##########################
+.nav {}
+
+.NavItems {
+  margin-left: 15rem;
+  font-family: $primaryFontFamily;
+}
+
+.NavItems a {
+  color: #fff;
+
+}
+
+.logo-text {
+  font-family: $secondaryFontFamily;
+  color: chocolate;
+}
+
+// ######################### Search bar styling #############################################
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.search-icon {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #aaa;
+  cursor: pointer;
+  width: 2rem;
+  font-size: 1.5rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.cart-icon {
+  position: absolute;
+  left: 120%;
+  top: 0;
+  font-size: 2rem;
+}
+
+/* #################################### responsive Navbar ############################ */
+@media screen and (max-width:900px) {
+  .NavItems {
+    margin-left: 1rem;
+  }
+
+  .cart-icon {
+    margin-right: 2rem;
+    top: -50%;
+  }
+
+  .search-input,
+  .search-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .NavItems {
+    margin-left: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .search-input,
+  .search-icon {
+    display: none;
+  }
+
+  .cart-icon {
+    position: absolute;
+    left: -50%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .NavItems {
+    margin-left: 1rem;
+  }
+
+  .search-input,
+  .search-icon {
+    display: block;
+  }
+}
+
+// ############################## Home page styling ###################################
+// ########################### homeslider animation ############################
+
+// ####################### Product card ######################
+.single__product {
+  border-radius: 15px;
+  background: #141124;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 1.5rem;
+  animation: animate 1s ease-in-out;
+}
+
+.single__product:hover {
+  box-shadow: 5px 5px 10px 5px #e1a38d;
+
+}
+
+.product__content {
+  padding: 0px 20px;
+}
+
+.product__content h6 {
+  color: #f5b70a;
+  text-align: center;
+}
+
+.price {
+  color: #fff;
+}
+
+.price span {
+  color: #f5b70a;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.shoppingCartIcon {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  background: #d98a6d;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shoppingCartIcon:hover {
+  background: transparent;
+}
+
+// ########################## Product Card animation #################################
+@keyframes animate {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+// ######################## Home( Choose Us styling ) ######################
+.single__feature span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.single__feature span:hover {
+
+  background: transparent;
+  cursor: pointer;
+}
+
+.single__feature-two span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.single__feature-two span:hover {
+
+  background: transparent;
+  cursor: pointer;
+}
+
+.choose__content {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+// ############################# Menu pack  styling ####################
+.filter-btn {
+  border: 1px solid #f5b70a;
+  padding: 7px 25px;
+  margin-left: 15px;
+  color: #fff;
+  background: transparent;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+
+.menu-title {
+  color: #f5b70a;
+  text-align: center;
+}
+
+.active-btn {
+  background: #f76E11;
+}
+
+// ##################################### Testimonial styling ##########################
+.single__Testimonial h6 {
+  color: #f5b70a;
+  font-size: 1.1rem;
+}
+
+.single__Testimonial p {
+  font-size: 0.8rem;
+
+}
+
+// ######################### Download styling ###########
+.app__container {
+  background: #f5b70a;
+  border-radius: 10px;
+}
+
+.app__img {
+  margin-bottom: -100px;
+
+}
+
+.app__content h2,
+.app__content h5 {
+  color: #0a071a;
+}
+
+.app__content {
+  padding-top: 50px;
+
+}
+
+.app__content p {
+  color: #fff;
+}
+
+.btn__apple {
+  background: #0a071a;
+  border: none;
+  color: #fff;
+  padding: 7px 25px;
+  border-radius: 5px;
+}
+
+.btn__google {
+  background: #fff;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  margin-left: 15px;
+
+}
+
+// ####################### Footer styling ######################
+.footer {
+  padding-bottom: 0;
+  margin-top: 1.5rem;
+
+}
+
+.footer__link-title {
+  color: #fff;
+}
+
+.link__item {
+  padding-left: 0;
+  background: transparent;
+  color: #c4c4c4;
+}
+
+.link__item a {
+  color: #c4c4c4;
+}
+
+.footer__bottom {
+  background: #141124;
+  padding: 30px 0px;
+}
+
+.footer__bottom p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.slider {
+  width: 100%;
+}
+
+// #################################### Responsive Home #####################
+@media screen and (max-width:900px) {
+  .slider__content {
+    font-size: 0.2rem;
+  }
+
+  .single__product {
+    margin-bottom: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .slider__content {
+    font-size: 0.2rem;
+  }
+
+  .single__product {
+    margin-bottom: 15px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+  .filter-btn{
+    margin-bottom: 15px;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .slider {
+    width: 100%;
+
+  }
+
+  .slider__wrapper {
+    flex-direction: column;
+  }
+
+  .slider__content {
+    font-size: 0.2rem;
+  }
+
+  .slider__content p {
+    font-size: 1rem;
+    line-height: 1rem;
+    width: 100%;
+    text-align: start;
+  }
+
+  .single__product {
+    margin-bottom: 15px;
+  }
+
+  .app__img img {
+
+    width: 95%;
+    margin-bottom: 50px;
+  }
+
+  .app__btns {
+    text-align: center;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+  .filter-btn{
+    margin-bottom: 15px;
+  }
+}

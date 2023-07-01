@@ -1,19 +1,19 @@
 import React from "react";
-import ReactDom from 'react-dom';
-// import PortfolioApp from './PortfolioApp';
-import {BrowserRouter} from 'react-router-dom';
-// import WeatherApp from './WeatherApp';
-// import ReactDom from 'react-dom'
-// import App from './RecipeApp/App';
-// import App from './App';
-// import CalculatorApp from './CalculatorApp';
-// import PomodoroApp from './PomodoroApp';
-import ReduxApp from './ReduxApp';
-ReactDom.render(
-  <>
-  <BrowserRouter>
-     <ReduxApp />
- </BrowserRouter>
-  </>,
-   document.getElementById("root")
+import ReactDOM from "react-dom";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "remixicon/fonts/remixicon.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+import App from "./App";
+import { Store } from "./App/Store";
+import { Provider } from "react-redux";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={Store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
